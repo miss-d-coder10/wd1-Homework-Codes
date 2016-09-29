@@ -1,0 +1,45 @@
+body{
+  ;
+}
+
+#input1,#input2{
+  border-radius: 3px;
+  background-color: yellow;
+  height: 20px;
+
+}
+
+#calculator{border: 2px solid black;
+            margin: auto;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: sans-serif;
+            width: 500px;
+            height: 100px;
+            margin-top: 50px;
+            border-radius: 5px;
+
+}
+
+.button{
+  background-color: blue;
+}
+
+.outcomebox{
+  border: 1px solid blue;
+  margin-top: 10px;
+  background-color: blue;
+
+
+}
+
+h1{
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/*#answer{
+  border-radius:
+  border: 1px solid white;
+}*/
