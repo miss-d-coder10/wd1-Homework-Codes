@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+  	<title>Rock, Paper, or Scissors?</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+  </head>
+
+  <body>
+
+    <h1>Rock, Paper, or Scissors?</h1>
+
+    <p>A steam-powered bot has challenged you to a game. <strong>Rock</strong> beats <strong>scissors</strong>, <strong>scissors</strong> beats <strong>paper</strong>, and <strong>paper</strong> beats <strong>rock</strong>.</p>
+
+    <div class="scoreboard">
+      <h2>Scoreboard</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td class="score" id="humanScore">0</td>
+            <td class="score" id="computerScore">0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="score" id="player1score">You</th>
+            <th class="score" id="botscore">Bot</th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  <div class="section2">
+    <h2>Choose Wisely</h2>
+
+    <button class= "buttonselector" id="rock">Rock</button>
+
+    <button class= "buttonselector" id="paper">Paper</button>
+
+    <button class= "buttonselector" id="scissors">Scissors</button>
+
+    <div id="status"></div>
+  </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

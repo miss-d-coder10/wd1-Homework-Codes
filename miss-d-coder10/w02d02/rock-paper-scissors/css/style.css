@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+  color: #6DE64B;
+}
+
+h1, p, h2{
+  text-align: center;
+}
+
+.scoreboard {
+  border: 1px solid #6DE64B;
+  width: 200px;
+  display: inline-block;
+  margin: 16px 20px 4px 230px;
+}
+
+table {
+  text-align: center;
+  font-size: 40px;
+}
+
+.score{
+  text-align: center;
+
+}
+#computerScore, #botscore {
+  color: red;
+  text-align: right;
+  width: 100px;
+
+}
+.buttonselector {
+            background-color: #6DE64B;
+            border: 1px solid #6DE64B;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 16px 20px 4px 105px;
+            cursor: pointer;
+            width: 70px;
+            height: 40px;
+            font-weight: bold;
+            font-family: sans-serif;
+}
+
+#status{
+  display: inline-block;
+  margin: 30px 20px 4px 310px;
+  text-align: center;
+}
