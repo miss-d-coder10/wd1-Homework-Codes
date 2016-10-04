@@ -8,7 +8,7 @@ var compChoice = choices[randomindex];
 var userChoice = "";
 var player1score = 0;
 var botscore = 0;
-var notification = document.getElementById("status");
+var notification = "";
 var status = document.getElementById("status");
 
 //button selector is the buttons for rock paper and scissors from HTML page.
@@ -30,7 +30,7 @@ function userSelector(){
 
 function checkForWin(){
   if (userChoice === compChoice){
-        notification = "draw";
+        notification = "Its a draw";
         console.log(notification);
         updateNotification();
   } else if (userChoice === "scissors" && compChoice === "rock" || userChoice === "rock" && compChoice === "paper" || userChoice === "paper" && compChoice === "scissors"){
@@ -52,7 +52,7 @@ function updateScoreBoard(){
   document.getElementById("computerScore").innerHTML = botscore;
 }
 
-//////////////////to show DRAW on the status DIV tage - not working///////////////////////
+
 function updateNotification(){
-  document.getElementById("status").notification.innerHTML = notification;
+  document.getElementById("status").innerHTML = notification;
 }
