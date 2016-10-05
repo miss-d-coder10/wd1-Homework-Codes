@@ -31,17 +31,17 @@ function userSelector(){
 function checkForWin(){
   if (userChoice === compChoice){
         notification = "Its a draw";
-        console.log(notification);
+        // console.log(notification); checking
         updateNotification();
   } else if (userChoice === "scissors" && compChoice === "rock" || userChoice === "rock" && compChoice === "paper" || userChoice === "paper" && compChoice === "scissors"){
         botscore++;
-        console.log("computer wins");
-        console.log(botscore);
+        // console.log("computer wins");
+        // console.log(botscore);
         updateScoreBoard();
   } else if (userChoice === "scissors" && compChoice === "paper" || userChoice === "rock" && compChoice === "scissors" || userChoice === "paper" && compChoice === "rock"){
         player1score++;
-        console.log("user wins");
-        console.log(player1score);
+        // console.log("user wins");
+        // console.log(player1score);
         updateScoreBoard();
   }else
         ;
@@ -56,3 +56,7 @@ function updateScoreBoard(){
 function updateNotification(){
   document.getElementById("status").innerHTML = notification;
 }
+
+//need to be done
+// restart function
+// write in OOP
