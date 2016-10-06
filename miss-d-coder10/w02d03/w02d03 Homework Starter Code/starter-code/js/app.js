@@ -49,8 +49,11 @@ $(function(){
 ////////////////////doesnt work. text doesnt clear after submission. unable to capture the var object that will be added on the existing object
   $userInput.on("submit", function(e) {
         e.preventDefault();
+        input = "";
       // console.log("submitted");
       var input = ($("#new-tweet-input").val());
+      
+
       // console.log(input);
       // $.each(newInput, function(key, value){
       //   // console.log(b);
@@ -61,10 +64,10 @@ $(function(){
               '<a href="#">' +
               '<img src="http://facehoff.herokuapp.com/50/50"' + 'alt="User image goes here.">' +  '</a>' +
             '<div class="content">' +
-              '<strong class="fullname">' + "" + '</strong>' +
+              '<strong class="fullname">' + newInput[3] + '</strong>' +
               '<span>&rlm;</span>' +
-              '<span>@</span>' + '<b>'+ "tweet.screen_name" + '</b>' + '&nbsp;&middot;&nbsp;' +
-              '<small class="time">' + "tweet.created_at" + '</small>' +
+              '<span>@</span>' + '<b>'+ newInput[2] + '</b>' + '&nbsp;&middot;&nbsp;' +
+              '<small class="time">' + "11mins" + '</small>' +
               '<p>' + input +  '</p>' +
             '</div>' +
           '</div>' +
