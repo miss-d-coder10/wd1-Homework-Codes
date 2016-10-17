@@ -16,6 +16,13 @@ app.use(morgan("dev"));
 
 app.use("/", router);
 
+app.get("/hilary", function(req, res){
+  res.render("webtemplate", {heading: "About Hilary Clinton"});
+});
+
+app.get("/trump", function(req, res){
+  res.render("webtemplate", {heading: "About Donald Trump"});
+});
 
 
 
