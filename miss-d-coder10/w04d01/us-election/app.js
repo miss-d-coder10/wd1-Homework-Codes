@@ -16,6 +16,7 @@ app.use(morgan("dev"));
 
 app.use("/", router);
 
+//heading to render into trump and hilary page but wont work
 app.get("/hilary", function(req, res){
   res.render("webtemplate", {heading: "About Hilary Clinton"});
 });
