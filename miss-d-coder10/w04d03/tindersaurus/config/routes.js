@@ -12,13 +12,9 @@ router.get("/profiles", profilesController.index);
 //   });
 // });
 
-router.get("/profiles/new", (req, res)=> res.render("profiles/new"));
-router.post("/profiles", (req, res) => {
-  Profile.create(req.body.profile, (err, profile) => {
-    if (err) return res.status(500).send("500: Server Error");
-    res.redirect(301, "/profiles");
-  });
-});
+router.get("/profiles/new", profilesController.new);
+router.post("/profiles", profilesController.create);
+
 
 
 

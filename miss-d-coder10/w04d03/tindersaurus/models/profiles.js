@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const profileSchema = new mongoose.Schema({
+  url: String,
   name: String,
   age: Number,
   species: String,
