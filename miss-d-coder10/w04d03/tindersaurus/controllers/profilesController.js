@@ -23,7 +23,7 @@ function profilesCreate(req, res){
 
 //SHOW - shows a single profile  which will be retrieve via get method through an id. go through the profile model on database
 function profilesShow(req, res) {
-  Quote.findById(req.params.urlId, (err, profile) => {
+  Profile.findById(req.params.urlId, (err, profile) => {
     if(err) return res.status(500).send("500: Server Error");
     res.render('profiles/show', { profile });
   });
@@ -39,7 +39,6 @@ function profilesShow(req, res) {
 
 //edit
 
-//update
 
 //delete
 
