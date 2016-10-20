@@ -14,7 +14,7 @@ router.get("/profiles", profilesController.index);
 
 router.get("/profiles/new", profilesController.new);
 router.post("/profiles", profilesController.create);
-router.get("/profiles/urlId:", profilesController.show);
+router.get("/profiles/:urlId", profilesController.show);
 
 
 
