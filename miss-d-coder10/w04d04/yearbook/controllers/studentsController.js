@@ -9,7 +9,7 @@ function studentsIndex(req, res){
 
 function studentsCreate(req, res){
   Student.create(req.body, (err, students) => {
-    if (err) res.status(500).json({error: err});
+    if (err) return res.status(500).json({error: err});
     res.status(201).json(students);
   });
 }
