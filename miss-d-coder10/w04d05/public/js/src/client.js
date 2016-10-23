@@ -31,3 +31,13 @@ const createWands = (e) => {
     addWand(wand);
   });
 };
+
+//delete
+// const deleteWands = () =>
+// $.ajax({
+//   url: "http://localhost:8000/wands",
+//   method: "DELETE"
+//   ...
+// })
+
+//edit
