@@ -36,8 +36,22 @@ restaurants.createMarker = function (restaurant) {
     position: latLng,
     map: restaurants.map
   };
-
   var marker = new google.maps.Marker(markerOptions);
+  restaurants.addInfoWindowForRestaurants(restaurant, marker);
+};
+
+restaurants.addInfoWindowForRestaurants = function (restaurant, marker) {
+  var _this = this;
+
+  google.maps.event.addListener(marker, "click", function () {
+    if (_this.infowindow) {
+      _this.infowindow.close();
+    }
+    _this.infowindow = new google.maps.InfoWindow({
+      content: "<img src=\"" + restaurant.image + "\">\n      <p>" + restaurant.name + "</p>\n      <p>" + restaurant.description + "</p>"
+    });
+    _this.infowindow.open(_this.map, marker);
+  });
 };
 
 $(restaurants.mapSetup.bind(restaurants));

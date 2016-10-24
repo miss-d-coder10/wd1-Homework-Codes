@@ -37,8 +37,24 @@ restaurants.createMarker = (restaurant) => {
     position: latLng,
     map: restaurants.map,
   };
-
   let marker = new google.maps.Marker(markerOptions);
+  restaurants.addInfoWindowForRestaurants(restaurant, marker);
 };
+
+restaurants.addInfoWindowForRestaurants = function (restaurant, marker){
+  google.maps.event.addListener(marker, "click", () => {
+    if(this.infowindow){
+      this.infowindow.close();
+    }
+    this.infowindow = new google.maps.InfoWindow({
+      content: `<img src="${restaurant.image}">
+      <p>${restaurant.name}</p>
+      <p>${restaurant.description}</p>`
+    });
+    this.infowindow.open(this.map, marker);
+  });
+};
+
+
 
 $(restaurants.mapSetup.bind(restaurants));
