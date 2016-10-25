@@ -56,3 +56,17 @@ restaurants.addInfoWindowForRestaurants = function (restaurant, marker) {
 };
 
 $(restaurants.mapSetup.bind(restaurants));
+
+navigator.geolocation.getCurrentPosition(function (position) {
+  var latLng = { lat: position.coords.latitude,
+    lng: position.coords.longitude
+
+  };
+  console.log(latLng);
+
+  var marker = new google.maps.Marker({
+    position: latLng,
+    animation: google.maps.Animation.DROP,
+    map: googleMaps.map
+  });
+});
