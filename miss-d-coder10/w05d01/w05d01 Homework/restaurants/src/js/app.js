@@ -11,14 +11,14 @@ restaurants.getrestaurants = function (){
     .done(this.loopThroughRestaurants);
 
 };
-
+//loop through the data that comes back from the server after being requested "GET"
 restaurants.loopThroughRestaurants = (data) =>{
   $.each(data.restaurants, (index, restaurant) => {
     // console.log(restaurant);
     restaurants.createMarker(restaurant);
   });
 };
-
+//google map set up. creating a map
 restaurants.mapSetup = function() {
   let mapId = document.getElementById("map");
   let mapOptions = {
@@ -29,7 +29,7 @@ restaurants.mapSetup = function() {
   this.getrestaurants();
 };
 
-
+//adding the marker on the map
 restaurants.createMarker = (restaurant) => {
   console.log("restaurant:", restaurant);
   let latLng = new google.maps.LatLng(restaurant.lat, restaurant.lng);
@@ -40,6 +40,7 @@ restaurants.createMarker = (restaurant) => {
   let marker = new google.maps.Marker(markerOptions);
   restaurants.addInfoWindowForRestaurants(restaurant, marker);
 };
+
 
 restaurants.addInfoWindowForRestaurants = function (restaurant, marker){
   google.maps.event.addListener(marker, "click", () => {
@@ -54,7 +55,5 @@ restaurants.addInfoWindowForRestaurants = function (restaurant, marker){
     this.infowindow.open(this.map, marker);
   });
 };
-
-
 
 $(restaurants.mapSetup.bind(restaurants));

@@ -11,14 +11,14 @@ var restaurants = restaurants || {};
 restaurants.getrestaurants = function () {
   $.get("http://localhost:3000/api/restaurants/").done(this.loopThroughRestaurants);
 };
-
+//loop through the data that comes back from the server after being requested "GET"
 restaurants.loopThroughRestaurants = function (data) {
   $.each(data.restaurants, function (index, restaurant) {
     // console.log(restaurant);
     restaurants.createMarker(restaurant);
   });
 };
-
+//google map set up. creating a map
 restaurants.mapSetup = function () {
   var mapId = document.getElementById("map");
   var mapOptions = {
@@ -29,6 +29,7 @@ restaurants.mapSetup = function () {
   this.getrestaurants();
 };
 
+//adding the marker on the map
 restaurants.createMarker = function (restaurant) {
   console.log("restaurant:", restaurant);
   var latLng = new google.maps.LatLng(restaurant.lat, restaurant.lng);
