@@ -1,3 +1,5 @@
+//create project controller with full CRUD actions
+
 const Project = require("../models/project");
 
 function projectsIndex(req, res) {
@@ -23,7 +25,11 @@ function projectsCreate(req, res) {
 // 	});
 // }
 
-// project show with populate the users id based on 1 project.
+//GET REQUEST
+// project show - populate using "users". Always look for the id - id based on 1 project.
+//find user and setting ID as parameter.
+//set user ids
+//execute - if error return status 500 or return the project with users ID
 function projectsShow(req, res){
   console.log(req.params.id); //req.params.id - id is the parameter of the model.
   Project.findById(req.params.id)
@@ -31,10 +37,8 @@ function projectsShow(req, res){
   .exec((err, project) =>{
     if(err) return res.status(500).json({ error: err});
     return res.status(200).json(project);
-
   });
 }
-
 
 function projectsUpdate(req, res) {
   Project.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, project) => {
@@ -47,7 +51,7 @@ function projectsDelete(req, res) {
   Project.findByIdAndRemove(req.params.id, (err) => {
     if(err) return res.status(500).json({ error: err });
     // return res.send(204);
-    res.status(204).end();
+    res.status(204).end(); //to resolve to deprecated issue
   });
 }
 

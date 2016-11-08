@@ -6,6 +6,7 @@ const router     = require("./config/routes");
 const port       = process.env.PORT || 8000;
 const app        = express();
 
+//run test using own database - project_test or database saved on mongoose (real database which we do not want to ruin)
 const dbName = process.env.NODE_ENV === 'test' ? 'referenced-yearbook-test' : 'referenced-yearbook';
 mongoose.connect(`mongodb://localhost/${dbName}`);
 

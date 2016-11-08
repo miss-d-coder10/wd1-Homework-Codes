@@ -1,3 +1,4 @@
+//node db/seeds to execute the function below. 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/referenced-yearbook');
 

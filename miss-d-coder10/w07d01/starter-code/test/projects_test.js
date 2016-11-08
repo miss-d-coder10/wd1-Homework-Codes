@@ -1,3 +1,4 @@
+//test database
 process.env.NODE_ENV = "test";
 
 const should = require("chai").should(); //downloaded / installed chain on terminal
@@ -8,11 +9,11 @@ const api = supertest(app); //downloaded / installed supertest
 const Project = require("../models/project");
 
 //////////////////////////////////////////////////////////////////////////
-
 //project index (GET)
+// /project is the URL
 describe("GET /projects", () => {
   before(done =>{
-    //based on project model
+    //called Project model
     Project.collection.drop();
     Project.create({
       title: "Jelly Beans",
@@ -21,13 +22,13 @@ describe("GET /projects", () => {
       users: ["5820ae22477a7f1c36cb7fd1"] //passing on any id.
     }, done);
   });
-
+  //test 1
   it("should return a 200 response", (done) =>{
     api.get("/projects")
       .set("accept", "application/json")
       .expect(200, done);
   });
-
+  //test 2
   it("should return an array", (done) =>{
     api.get("/projects")
     .set("accept", "application/json")
@@ -58,7 +59,7 @@ describe("post /projects", () =>{
     })
     .expect(201, done);
   });
-
+///////////////////////returning object - need to understand
   it("should return an object", (done) =>{
     api.post("/projects")
     .set("Accept", "application/json")
@@ -100,7 +101,7 @@ describe("GET /projects/:id", () =>{
     .set("Accept", "application/json")
     .expect(200, done);
   });
-
+///////////////////////returning object - need to understand
   it("should return an object containing fields title, github, url, and users", (done) =>{
     api.get(`/projects/${projectId}`)
     .set("Accept", "application/json")
@@ -111,7 +112,7 @@ describe("GET /projects/:id", () =>{
       users: ["5820ae22477a7f1c36cb7fd1"]
     })
     .end((err, res) =>{
-      expect(res.body).to.be.an("object");
+      expect(res.body).to.be.an("object"); ///????
       done();
       // expect(res.body[0]).to.have.property("title");
       // expect(res.body[0]).to.have.property("github");
