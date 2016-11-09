@@ -1,8 +1,11 @@
 angular.module('TicTacToe')
   .controller('GameController', GameController);
 
+
+
 function GameController() {
   this.clickBox = 0;
+
   this.cells = [
     null,
     null,
@@ -14,6 +17,9 @@ function GameController() {
     null,
     null
   ];
+
+
+
 
   function mrClick($index) {
     this.clickBox++;
