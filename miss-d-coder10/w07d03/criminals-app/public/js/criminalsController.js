@@ -30,7 +30,7 @@ function CriminalsController($http) {
   }
 
   /////////////////////////////////////////////////////////////////////////////////////////
-  //GET
+  //GET - this displays the data on the page once entered
 
   function getCriminal(){
     $http.get('/criminals')
@@ -39,7 +39,8 @@ function CriminalsController($http) {
         criminals.all = res.data;
       });
   }
-
+///////////////////////////////////////////////////////////////////////////
+//delete
   function deleteCriminal(id) {
     console.log('delete', id);
     $http.delete(`/criminals/${id}`)

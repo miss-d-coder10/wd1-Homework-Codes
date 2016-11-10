@@ -16,12 +16,13 @@
   <section ng-controller="CriminalsController as criminals">
     <ul id="criminals">
       <li ng-repeat="criminal in criminals.all">
+        <!-- criminal.status recognises the class "alive or dead once entered on the database therefore it recognises the css class" ng class creates a class-->
         <strong>Name:{{ criminal.name }}</strong> <em>Location:{{ criminal.location }}</em> <span class="status" ng-class="criminal.status">Status:{{ criminal.status }}</span>
         <button class="delete" ng-click="criminals.deleteCriminal(criminal._id)">X</button>
         <!-- <button class="edit" ng-click="criminals.editCriminal(criminal._id)">edit</button> -->
       </li>
     </ul>
-{{criminals.form.name.$error}}
+<!-- {{criminals.form.name.$error}} -->
     <form id="newCriminal" name="criminals.form" ng-submit="criminals.addCriminal()" novalidate >
       <div>
         <label for="newCriminal-name">Name:</label>
@@ -31,7 +32,6 @@
             <p ng-message="required">Name is required</p>
             <p ng-message="minlength">Name is too short</p>
         </div>
-
       </div>
 
       <div>
