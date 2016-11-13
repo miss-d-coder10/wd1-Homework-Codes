@@ -1,0 +1,22 @@
+<section class="row">
+  <form ng-submit="booksEdit.update()">
+    <div class="twelve columns">
+      <label>Name</label>
+      <input type="text" name="title" placeholder="title" ng-model="booksEdit.book.title" class="u-full-width">
+    </div>
+    <div class="twelve columns">
+      <label>Breed</label>
+      <input type="text" name="author" placeholder="author" ng-model="booksEdit.book.author" class="u-full-width">
+    </div>
+    <div class="twelve columns">
+      <label>Nature</label>
+      <input type="text" name="description" placeholder="description" ng-model="booksEdit.book.description" class="u-full-width">
+    </div>
+    <div class="twelve columns">
+      <label>Photo</label>
+      <input type="text" name="image" placeholder="image" ng-model="booksEdit.book.image" class="u-full-width">
+    </div>
+
+    <button class="button-primary">Update Book</button>
+  </form>
+</section>
