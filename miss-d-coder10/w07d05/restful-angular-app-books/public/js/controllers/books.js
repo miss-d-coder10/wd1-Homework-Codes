@@ -24,7 +24,7 @@ function BooksNewController(Book, $state) {
       $state.go('booksIndex');
     });
   }
-  booksNew.create = createBook;
+  booksNew.createBook = createBook;
 }
 
 BooksShowController.$inject = ['Book', '$state'];
@@ -38,7 +38,7 @@ function BooksShowController(Book, $state) {
       $state.go('booksIndex');
     });
   }
-  booksShow.delete = deleteBook;
+  booksShow.deleteBook = deleteBook;
 }
 
 BooksEditController.$inject = ['Book', '$state'];
