@@ -10,6 +10,7 @@ function BooksIndexController(Book){
   const booksIndex = this;
 
   booksIndex.all = Book.query();
+  console.log(booksIndex);
 }
 
 BooksNewController.$inject = ['Book', '$state'];
