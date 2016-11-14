@@ -3,6 +3,6 @@
   <h2>{{ booksShow.book.title }}</h2>
   <h4>{{ booksShow.book.author }}</h4>
   <p>{{ booksShow.book.description }}</p>
-  <button class="button-primary"><a ui-sref="booksEdit({id: booksShow.book._id})">Edit Book</a></button>
-  <button class="button-primary" ng-click="booksShow.deleteBook()">Delete</button>
+  <button class="button-primary" ng-if="main.isLoggedIn()"><a ui-sref="booksEdit({id: booksShow.book._id})">Edit Book</a></button>
+  <button class="button-primary" ng-if="main.isLoggedIn()"ng-click="booksShow.deleteBook()">Delete</button>
 </section>

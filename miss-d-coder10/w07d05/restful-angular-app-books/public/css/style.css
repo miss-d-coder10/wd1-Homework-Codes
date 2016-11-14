@@ -1,11 +1,17 @@
+body{
+  background-color: #ccc6ba;
+
+}
 ul {
   list-style: none;
+
 }
 
 nav ul li {
   display: inline-block;
   min-width: 100px;
   text-align: center;
+  text-decoration: none;
 }
 
 nav ul li a {
