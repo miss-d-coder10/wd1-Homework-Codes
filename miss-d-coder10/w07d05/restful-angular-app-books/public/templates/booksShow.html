@@ -1,6 +1,6 @@
 <section>
   <img ng-src="{{ booksShow.book.image }}" class="image">
-  <h2>{{ booksShow.book.title }}</h2>
+  <h3>{{ booksShow.book.title }}</h3>
   <h4>{{ booksShow.book.author }}</h4>
   <p>{{ booksShow.book.description }}</p>
   <button class="button-primary" ng-if="main.isLoggedIn()"><a ui-sref="booksEdit({id: booksShow.book._id})">Edit Book</a></button>

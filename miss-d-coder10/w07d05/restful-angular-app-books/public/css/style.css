@@ -1,10 +1,10 @@
 body{
-  background-color: #ccc6ba;
-
+  /*background-color: #ccc6ba;*/
+    text-decoration: none;
 }
 ul {
   list-style: none;
-
+  text-decoration: none;
 }
 
 nav ul li {
@@ -16,10 +16,14 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  text-decoration: none;
   padding: 10px;
 }
 
 nav ul li a.active {
   background-color: #fcfcfc;
+}
+
+img {
+  width: 150px;
+  height: 220px;
 }
