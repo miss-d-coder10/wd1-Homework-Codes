@@ -21,15 +21,15 @@ elsif response == "mortgage calculator"
 elsif response == "stamp duty"
   puts "enter the price of the property"
   price = gets.to_f
-
-  if price < 125000
-    puts "No stamp duty"
-  elsif price > 125000
-    answer = price * 0.02
-  else price > 250000
-    answer = 2500 + 2500
-  end
-  puts "stamp duty is #{answer}"
+    if price < 125000
+      answer = 0
+      puts "no stamp duty"
+    elsif price >= 125000
+      answer = price * 0.02
+    else price >= 250000
+      answer = price * 0.05
+    end
+    puts "stamp duty is #{answer}"
 
 
 else
