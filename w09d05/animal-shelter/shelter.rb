@@ -6,11 +6,15 @@ class Shelter
     @name = name
     @capacity = 20
     @animals = []
+    @registered_clients = []
   end
 
   def add_animal(animal)
     @animals << animal
   end
 
+  def add_client(client)
+    @registerd_clients = client
 
+  end
 end

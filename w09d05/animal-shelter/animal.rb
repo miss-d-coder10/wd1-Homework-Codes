@@ -13,3 +13,11 @@ class Animal
     @favourite_toys << favourite_to
   end
 end
+
+dog = Animal.new ("Billy, Husky, Male, [bones, ball]")
+cat = Animal.new ("Pudding, Scottish fold, Male, [mouse, string]")
+
+puts rocky.name
+puts rocky.breed
+puts rocky.gender
+puts rocky.toys
