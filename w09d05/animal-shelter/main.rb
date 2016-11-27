@@ -8,7 +8,7 @@ require_relative "shelter"
 
 
 def list_clients(shelter)
-  shelter.registed_clients.each_with_index do |client, index|
+  shelter.registered_clients.each_with_index do |client, index|
     puts "#{index}.\t#{client}"
   end
 end

@@ -14,7 +14,7 @@ class Shelter
   end
 
   def add_client(client)
-    @registerd_clients = client
+    @registered_clients = client
 
   end
 end

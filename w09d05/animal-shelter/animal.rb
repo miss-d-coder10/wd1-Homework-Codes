@@ -14,10 +14,10 @@ class Animal
   end
 end
 
-dog = Animal.new ("Billy, Husky, Male, [bones, ball]")
-cat = Animal.new ("Pudding, Scottish fold, Male, [mouse, string]")
-
-puts rocky.name
-puts rocky.breed
-puts rocky.gender
-puts rocky.toys
+# dog = Animal.new ("Billy, Husky, Male, [bones, ball]")
+# cat = Animal.new ("Pudding, Scottish fold, Male, [mouse, string]")
+#
+# puts dog.name
+# puts dog.breed
+# puts dog.gender
+# puts dog.toys
