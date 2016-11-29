@@ -1,50 +1,97 @@
 console.log("test");
 
-// 1. write long CODE - listed below
-// 2. refactor the long code to smaller functions
+var playButton = document.getElementById("button");
+var player = document.getElementById("player");
+//add events listener that applies to all the loops
+for (var i=0 ; i<playButton.length; i++){
+  playButton[i].addEventListener("click", playSound); //invoking a function
+  console.log(this);
+}
+  function playSound(){
+  var musicFile = this.id + ".wav"; // concatinating
+  player.src = "../sounds/" + musicFile;
+  player.play(); //calling the function
+}
 
 
-////////////////refactored code below doesnt work////////////////////////
-var playButton = document.getElementsByClassName("button");
-for (var i=0; i<playButton.length; i++){
-  playButton[i].addEventListener("click", musicPlayer);
-  }
+//using if/else statement to run the conditions.
 
-  function musicPlayer(){
-    // console.log(playButton); click button works
-    if(playButton.textContent === "Work it"){
-        player.src = "../sounds/work_it.wav";
-        player.play();
-      }
-    else if (playButton.textContent === "Make it"){
-      player.src = "../sounds/make_it.wav";
-      player.play();
-    }
+  // function musicPlayer(){
+  //   // console.log(playButton); click button works
+  //   console.log(this); //this refers to the () whatever it is invoking the function in this situation, it is the Button.
+  //   if(this.textContent === "Work it"){
+  //       player.src = "../sounds/work_it.wav";
+  //       player.play();
+  //     }
+  //   else if (this.textContent === "Make it"){
+  //     player.src = "../sounds/make_it.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Do it"){
+  //     player.src = "../sounds/do_it.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Makes us"){
+  //     player.src = "../sounds/makes_us.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Harder"){
+  //     player.src = "../sounds/harder.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Better"){
+  //     player.src = "../sounds/better.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Faster"){
+  //     player.src = "../sounds/faster.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Stronger"){
+  //     player.src = "../sounds/stronger.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "More than"){
+  //     player.src = "../sounds/more_than.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Hour"){
+  //     player.src = "../sounds/hour.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Our"){
+  //     player.src = "../sounds/our.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Never"){
+  //     player.src = "../sounds/never.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Ever"){
+  //     player.src = "../sounds/ever.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "After"){
+  //     player.src = "../sounds/after.wav";
+  //     player.play();
+  //   }
+  //   else if (this.textContent === "Work is"){
+  //     player.src = "../sounds/work_is.wav";
+  //     player.play();
+  //   }
+  //   // else if (this.textContent === "Over"){
+  //   //
+  //   // }
+  //   else {player.src = "../sounds/over.wav";
+  //   player.play();}
+  //   }
 
-    }
 
-//////////////////////////////////////////////////////
-///all variables
 
-  // var playButton = document.getElementById("workit");
-  // var playButton2 = document.getElementById("makeit");
-  // var playButton3 = document.getElementById("doit");
-  // var playButton4 = document.getElementById("makesus");
-  // var playButton5 = document.getElementById("harder");
-  // var playButton6 = document.getElementById("better");
-  // var playButton7 = document.getElementById("faster");
-  // var playButton8 = document.getElementById("stronger");
-  // var playButton9 = document.getElementById("morethan");
-  // var playButton10 = document.getElementById("hour");
-  // var playButton11 = document.getElementById("our");
-  // var playButton12 = document.getElementById("never");
-  // var playButton13 = document.getElementById("ever");
-  // var playButton14 = document.getElementById("after");
-  // var playButton16 = document.getElementById("over");
-  // var playButton15 = document.getElementById("workis");
 
-////////////////// "Long CODE to be refactored" ////////////////////////////////////////////////////////
 
+//////////////// 1. "Long CODE to be refactored" ////////////////////////////////////////////////////////
+  //
   // var playButton = document.getElementById("workit");
   // playButton.addEventListener("click", music);
   //

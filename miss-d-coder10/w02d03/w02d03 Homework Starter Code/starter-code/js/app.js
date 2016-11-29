@@ -3,12 +3,12 @@ $(function(){
   console.log(window.tweets); // all objects listed on this
 
 
-  var $ol = $(".stream-items");
+  var $ol = $(".stream-items"); //$ol - naming convention only.
   var $form = $("#form");
   var $userInput = $("#new-tweet-form");
 
   var newInput = {
-      created_at: "",
+      created_at: new Date(),
       name: "",
       screen_name: "",
       text: "",
@@ -16,7 +16,7 @@ $(function(){
   };
     // console.log(newInput);
 
-
+//(i, tweet) i = index of the array
 
   $.each(window.tweets, function(i, tweet){
     // console.log(i); this is the index
@@ -48,11 +48,12 @@ $(function(){
 
 ////////////////////doesnt work. text doesnt clear after submission. unable to capture the var object that will be added on the existing object
   $userInput.on("submit", function(e) {
-        e.preventDefault();
+        e.preventDefault(); //prevent the page from reloading
         input = "";
       // console.log("submitted");
-      var input = ($("#new-tweet-input").val());
-      
+      var input = ($("#new-tweet-input").val()); //: input to capture all inputs. or $form.fins("textarea").val());
+
+      //using if statement if($tweettext.length>0){$ol.prepend}
 
       // console.log(input);
       // $.each(newInput, function(key, value){
@@ -64,7 +65,7 @@ $(function(){
               '<a href="#">' +
               '<img src="http://facehoff.herokuapp.com/50/50"' + 'alt="User image goes here.">' +  '</a>' +
             '<div class="content">' +
-              '<strong class="fullname">' + newInput[3] + '</strong>' +
+              '<strong class="fullname">' + newInput[3] + '</strong>' + //doesnt work
               '<span>&rlm;</span>' +
               '<span>@</span>' + '<b>'+ newInput[2] + '</b>' + '&nbsp;&middot;&nbsp;' +
               '<small class="time">' + "11mins" + '</small>' +

@@ -1,0 +1,22 @@
+<section class="row">
+  <form ng-submit="booksNew.createBook()">
+    <div class="twelve columns">
+      <label>Title</label>
+      <input type="text" name="title" placeholder="Title" ng-model="booksNew.book.title" class="u-full-width">
+    </div>
+    <div class="twelve columns">
+      <label>Author</label>
+      <input type="text" name="director" placeholder="Author" ng-model="booksNew.book.author" class="u-full-width">
+    </div>
+    <div class="twelve columns">
+      <label>Description</label>
+      <input type="text" name="releaseDate" placeholder="Description" ng-model="booksNew.book.description" class="u-full-width">
+    </div>
+    <div class="twelve columns">
+      <label>Image</label>
+      <input type="text" name="posterImage" placeholder="Image Url" ng-model="booksNew.book.image" class="u-full-width">
+    </div>
+
+    <button>Add book</button>
+  </form>
+</section>

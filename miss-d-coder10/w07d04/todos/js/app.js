@@ -14,6 +14,11 @@ function MainRouter($stateProvider, $urlRouterProvider){
     .state('archive', {
       url: '/archive',
       templateUrl: 'archive.html'
+    })
+    //edit route for edit page
+    .state('edit', {
+      url: '/edit',
+      templateUrl: 'edit.html'
     });
   $urlRouterProvider.otherwise('/');
 }

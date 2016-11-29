@@ -8,9 +8,14 @@
     <script src="/js/app.js" charset="utf-8"></script>
     <script src="/js/gameController.js" charset="utf-8"></script>
   </head>
+  <!-- hook into gameController function and refer as a game -->
   <body ng-controller="GameController as game">
     <h1>Tic Tac Toe</h1>
     <ul>
+      <!-- print using handlebar notation {{}} -->
+      <!-- cell is a name/placeholder. getting it from the game controller -->
+      <!-- calling mrclick function from GAME - gameController -->
+      <!-- ng class - turns into class. {clicked : cell} fill in css when truthy. -->
       <li ng-repeat="cell in game.cells track by $index" ng-click="game.mrClick($index)">{{ cell }}</li>
     </ul>
   </body>

@@ -13,8 +13,8 @@ for(var i=0;i<boxes.length;i++){
 
 
 
-//winning conditions
-if(boxes[0].textContent && boxes[0].textContent === boxes[1].textContent && boxes[0].textContent === boxes[2].textContent) {
+//winning and draw conditions
+    if(boxes[0].textContent && boxes[0].textContent === boxes[1].textContent && boxes[0].textContent === boxes[2].textContent) {
       alert("boom we have a winner");    //row 1
   } else if (boxes[3].textContent && boxes[3].textContent === boxes[4].textContent && boxes[3].textContent === boxes[5].textContent){
       alert("boom we have a winner"); // row 2

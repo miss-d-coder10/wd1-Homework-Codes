@@ -7,7 +7,7 @@ function register(req, res){
    if (err) return res.status(500).json({ message: "Something went wrong." });
 
    let payload = { _id: user._id, username: user.username};
-   let token = jwt.sign(payload, secret, {expiresIn: 60*60*24});
+   let token = jwt.sign(payload, secret, {expiresIn: 60*60*24}); //make a a code and encode it with payload and secret. 
 
    return res.status(201).json({
      message: `Welcome ${user.username}!`,

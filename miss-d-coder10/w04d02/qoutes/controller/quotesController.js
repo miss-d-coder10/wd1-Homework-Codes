@@ -8,7 +8,7 @@ const qoutesIndex = (req, res) => {
 //new quotes
 const quotesNew = (req, res) => {
   res.render("/new");
-d};
+};
 
 //create -
 const quotesCreate = (req, res) => {

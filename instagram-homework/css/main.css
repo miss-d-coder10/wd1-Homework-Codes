@@ -1,0 +1,89 @@
+body {
+  font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-image: url(../images/bgtile.png);
+  background-repeat: repeat-x;
+}
+
+main {
+  width: 870px;
+  margin: 100px auto 30px;
+}
+
+.phones {
+  display: inline-block;
+}
+
+.info {
+  display: inline-block;
+  vertical-align: top;
+  width: 505px;
+  margin-left: 40px;
+}
+
+.info-header {
+  margin: 10px 0;
+  padding: 0 5px;
+}
+
+.info-text {
+  background-image: url(../images/frame.png);
+  background-repeat: no-repeat;
+  padding: 40px;
+}
+
+h1 {
+  margin-top: 0;
+  color: #2e5175;
+  font-size: 22px;
+  width: 230px;
+  line-height: 1.2;
+}
+
+button {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 15px 15px 45px;
+  position: relative;
+  border-radius: 5px;
+  border: 0;
+  float: right;
+  margin-top: 15px;
+  margin-right: 5px;
+  background: linear-gradient(#6791b1, #40729a);
+  box-shadow: 0 0 5px 0 #32526c;
+  text-shadow: 0px 1px 2px #32526c;
+}
+
+button img {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.app-store {
+  margin-right: 15px;
+}
+
+.app-store, .google-play {
+  margin-top: 20px;
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer ul li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6c92b1;
+}
+
+footer ul li#copyright {
+  color: #acadad;
+}

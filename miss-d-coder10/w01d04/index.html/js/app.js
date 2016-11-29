@@ -29,5 +29,5 @@ function calculator(event){
       break;
       default:
     }
-    document.getElementById("result").innerHTML = result ;
+    document.getElementById("result").innerHTML = result;
     }

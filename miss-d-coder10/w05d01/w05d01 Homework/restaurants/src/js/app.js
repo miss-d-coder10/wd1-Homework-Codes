@@ -58,7 +58,10 @@ restaurants.addInfoWindowForRestaurants = function (restaurant, marker){
 
 $(restaurants.mapSetup.bind(restaurants));
 
-
+//navigator -browser
+//geolocation - API
+//passing in position object
+//ruuning a function of (array or object)
 navigator.geolocation.getCurrentPosition((position) => {
   let latLng = {lat: position.coords.latitude,
                 lng: position.coords.longitude

@@ -1,0 +1,25 @@
+      <!-- begin add new todo -->
+      <h1>Edit Page</h1>
+      <form class="add-todo" ng-submit="todos.updateTodo()">
+        <input class="text-box" type="text" placeholder="I need to..." ng-model="todos.editMe.text">
+        <input type="submit" class="btn btn-add" value="+">
+      </form>
+
+      <!-- end add new todo -->
+  {{todos.editMe}}
+      <!-- begin show all todos -->
+      <section class="todo-list">
+        <ul>
+          <li ng-repeat="todo in todos.remainingTodos()">
+            <input class="checkbox" type="checkbox" ng-model="todo.done" id="todo-{{$index}}">
+            <label for="todo-{{$index}}" ng-class="{done: todo.done}">{{ todo.task }}</label>
+            <button class="btn btn-delete" ng-click="todos.editTodo($index)">Edit</button>
+          </li>
+        </ul>
+      </section>
+      <!-- end show all todos -->
+
+<!-- when click on edit button it populate the form -->
+<!-- create variable edit me -->
+<!-- $index in tthe array -->
+<!-- ng-model - todos.editMe.text - store the new .text -->

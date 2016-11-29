@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="bookApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+    <script src="/js/controllers/books.js" charset="utf-8"></script>
+    <script src="/js/models/book.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header class="container">
+      <h1>Book Club</h1>
+      <nav>
+        <ul>
+          <li><a ui-sref="booksIndex" class="heading" ui-sref-active="active">View all books</a></li>
+          <li><a ui-sref="booksNew" class="heading" ui-sref-active="active">Add your book</a></li>
+        </ul>
+    </header>
+    <main class="container" ui-view>
+
+    </main>
+  </body>
+</html>

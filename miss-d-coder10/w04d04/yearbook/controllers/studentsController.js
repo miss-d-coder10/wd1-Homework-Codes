@@ -22,7 +22,7 @@ function studentsShow(req, res){
 }
 
 function studentsUpdate(req, res) {
-  Student.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, dog) => {
+  Student.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, students) => {
     if(err) return res.status(500).json({ error: err });
     res.json(students);
   });

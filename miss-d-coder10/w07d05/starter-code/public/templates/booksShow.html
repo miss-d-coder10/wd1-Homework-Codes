@@ -1,0 +1,9 @@
+<section>
+  <img ng-src="{{ booksShow.book.image }}">
+  <h2>{{ book.title }}</h2>
+  <h4>{{ book.author }}</h4>
+  <p>{{ book.description }}</p>
+
+  <button ui-sref="booksEdit ({ id: booksShow.book._id})">Edit</button>
+  <button ng-click="booksShow.deleteBook()">Delete</button>
+</section>

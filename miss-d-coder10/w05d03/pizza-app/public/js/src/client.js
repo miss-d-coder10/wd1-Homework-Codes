@@ -118,7 +118,7 @@ $(() =>{
         <div>
           <h2>${pizza.name}</h2>
           <p>${pizza.toppings}</p>
-          <p>Vegetarian</p>
+          <p>Vegetarian </p>
           <img src="${pizza.img}">
           <button class="delete" data-id="${pizza._id}">Delete</button>
           <button class="edit" data-id="${pizza._id}">Edit</button>
