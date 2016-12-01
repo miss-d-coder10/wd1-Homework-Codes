@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mountains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Height</th>
+      <th>Image</th>
+      <th>Date of first summit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mountains.each do |mountain| %>
+      <tr>
+        <td><%= mountain.name %></td>
+        <td><%= mountain.location %></td>
+        <td><%= mountain.height %></td>
+        <td><%= image_tag mountain.image, width: 200, height: 100 %></td>
+        <td><%= mountain.date_of_first_summit %></td>
+        <td><%= link_to 'Show', mountain %></td>
+        <% if logged_in? %>
+        <td><%= link_to 'Edit', edit_mountain_path(mountain) %></td>
+        <td><%= link_to 'Destroy', mountain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mountain', new_mountain_path %>
