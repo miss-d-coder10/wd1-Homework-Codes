@@ -1,0 +1,1 @@
+json.array! @hikers, partial: 'hikers/hiker', as: :hiker

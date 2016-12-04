@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trail.name %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @trail.distance %>
+</p>
+
+<p>
+  <strong>Conditions:</strong>
+  <%= @trail.conditions %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @trail.country.name %>
+</p>
+<% if logged_in? %>
+<%= link_to 'Edit', edit_trail_path(@trail) %> |
+<% end %>
+<%= link_to 'Back', trails_path %>

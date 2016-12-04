@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @country.name %>
+</p>
+
+<p>
+  <strong>Trails:</strong>
+  <ul>
+    <% @country.trails.each do |trail| %>
+      <li><%= trail.name %></li>
+    <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'Back', countries_path %>

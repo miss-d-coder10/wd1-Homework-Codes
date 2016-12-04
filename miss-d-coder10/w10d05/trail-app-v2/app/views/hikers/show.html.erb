@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hiker.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @hiker.image %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%= @hiker.nationality %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @hiker.age %>
+</p>
+
+<%= link_to 'Edit', edit_hiker_path(@hiker) %> |
+<%= link_to 'Back', hikers_path %>

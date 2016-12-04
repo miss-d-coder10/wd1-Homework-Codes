@@ -1,0 +1,1 @@
+json.partial! "hikers/hiker", hiker: @hiker

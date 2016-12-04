@@ -1,0 +1,38 @@
+<%= form_for(trail) do |f| %>
+  <% if trail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trail.errors.count, "error") %> prohibited this trail from being saved:</h2>
+
+      <ul>
+      <% trail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :distance %>
+    <%= f.text_field :distance %>
+  </div>
+
+  <div class="field">
+    <%= f.label :conditions %>
+    <%= f.text_field :conditions %>
+  </div>
+
+
+  <div class="field">
+  <%= f.label :country %>
+  <%= f.collection_select(:country_id, Country.all, :id, :name) %>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
